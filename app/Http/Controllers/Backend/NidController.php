@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\complaintlist;
+use App\Models\nidlist;
 use Illuminate\Http\Request;
 
 class NidController extends Controller
@@ -11,29 +11,32 @@ class NidController extends Controller
 
     public function nidList()
     {
-        $types=complaintlist::all(); //table r sob dekhanor jonno
-        return view('admin.layouts.complaint-list' ,compact('types'));
+        $types=nidlist::all(); //table r sob dekhanor jonno
+        return view('admin.layouts.nid-list' ,compact('types'));
     }
-    public function complaintCreate()
+    public function nidCreate()
     {
-        return view('admin.layouts.complaint-create');
+       return view('admin.layouts.nid-create');
 
     }
 
-   // public function store(Request $request){
+   public function store(Request $request){
         //dd($request->all());
      
-//dd($request->all());
-        //complaintlist::create([
+        nidlist::create([
             //field name from DB ||  field name from form
-        //'complaintnumber'=>$request->complaintnumber,
-       // 'complainttype'=>$request->complainttype,
-        //'complaintdetails'=>$request->complaintdetails,
-       // 'image'=>$filename
+        'nidnumber'=>$request->nidnumber,
+       'name'=>$request->name,
+        'fname'=>$request->fname,
+        'mname'=>$request->mname,
+        'cell'=>$request->cell,
+        'email'=>$request->email,
+        'birthdate'=>$request->birthdate,
+        'address'=>$request->address
            
-     // ]);
-       // return redirect()->route('admin.complaints');
-   // }
+     ]);
+     return redirect()->back();
+    }
 
    
 

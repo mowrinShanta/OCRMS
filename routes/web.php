@@ -4,6 +4,8 @@ use App\Http\Controllers\Backend\OfficeController;
 use App\Http\Controllers\Backend\ComplaintController;
 use App\Http\Controllers\Backend\ComplainerController;
 use App\Http\Controllers\Backend\NidController;
+use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Frontend\contactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,13 +21,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('user.main');
+
 });
+//Apply form show korar jonno
+Route::get('/applys',[UserController::class,'applyList'])->name('user.applys');
+//contact table show korar jonno
+Route::get('/contacts',[ContactController::class,'contactList'])->name('user.contacts');
+
 
 
 Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/', function () {
         return view('admin.master');
     })->name('admin');
+
+    //login
+   // Route::get('/login',[LoginController::class,'login'])->name('admin.logins');
+
+
+
+    //end login
     Route::get('/offices',[OfficeController::class,'officeList'])->name('admin.offices');
     Route::get('/offices/create',[OfficeController::class,'officeCreate'])->name('admin.offices.create');
     Route::post('/offices/store',[OfficeController::class,'store'])->name('admin.offices.store');
@@ -46,3 +61,5 @@ Route::group(['prefix'=>'admin-portal'],function(){
 
 
 //user route
+
+    
