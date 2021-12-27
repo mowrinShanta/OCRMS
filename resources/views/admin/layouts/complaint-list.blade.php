@@ -28,7 +28,11 @@
     <td>
         <img src="{{url('/uploads/'.$complainttype->image)}}" width="100px" alt="image">
     </td>
-    <td><a href="#" class="btn btn-success">Edit</a> <a href="#" class="btn btn-success">Delete</a></td>
+    <td>
+    <a href="#" class="btn btn-primary">View</a>
+    <a href="#" class="btn btn-success">Edit</a> 
+    <a href="#" class="btn btn-danger">Delete</a>
+    </td>
     
     </tr>
 

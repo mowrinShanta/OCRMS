@@ -15,6 +15,7 @@
         <th scope="col">Telephone</th>
         <th scope="col"> Cell</th>
         <th scope="col">Email</th>
+        <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
@@ -26,7 +27,11 @@
     <td>{{$counciloroffice->telephone}} </td>
     <td>{{$counciloroffice->cell}} </td>
     <td>{{$counciloroffice->email}} </td>
-    
+    <td>
+                        <a class="btn btn-primary" href="{{route('admin.office.details',$counciloroffice->id)}}">View</a>
+                        <a class="btn btn-success" href="{{route('admin.offices.edit',$counciloroffice->id)}}">Edit</a>
+                        <a class="btn btn-danger" href="{{route('admin.office.delete',$counciloroffice->id)}}">Delete</a>
+                    </td>
     </tr>
     @endforeach
     </tbody>

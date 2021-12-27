@@ -34,7 +34,11 @@
     <td>{{$nidtype->birthdate}} </td>
     <td>{{$nidtype->address}} </td>
     </td>
-    <td><a href="#" class="btn btn-success">Edit</a> <a href="#" class="btn btn-success">Delete</a></td>
+    <td>
+    <a href="#" class="btn btn-primary">View</a>
+    <a href="#" class="btn btn-success">Edit</a> 
+    <a href="#" class="btn btn-danger">Delete</a>
+</td>
     
     </tr>
 

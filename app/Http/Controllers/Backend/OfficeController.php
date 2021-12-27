@@ -41,9 +41,52 @@ class OfficeController extends Controller
         'email'=>$request->email,
            
       ]);
-        return redirect()->back();
+      return redirect()->route('admin.offices');
     }
 
+    public function officeDetails($office_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $office=counciloroffice::find($office_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.layouts.office-details',compact('office'));
+    }
+
+    public function officeDelete($office_id)
+    {
+        counciloroffice::find($office_id)->delete();
+       return redirect()->back()->with('success','Office detail Deleted.');
+    }
+
+
+    public function officeEdit($id){
+        // dd($id);
+        $counciloroffices = counciloroffice::all();
+        $counciloroffice = counciloroffice::find($id);
+        if ($counciloroffice) {
+            return view('admin.layouts.update-counciloroffice',compact('counciloroffice'));
+        }
+
+    }
+
+    public function officeUpdate(Request $request,$id){
+        // dd($request->all());
+        // dd($id);
+        $counciloroffice = counciloroffice::find($id);
+        // dd($counciloroffice);
+        if ($counciloroffice) {
+            $counciloroffice->update([
+                'name'=>$request->name,
+            'address'=>$request->address,
+            'telephone'=>$request->telephone,
+            'cell'=>$request->cell,
+            'email'=>$request->email,
+            ]);
+            return redirect()->route('admin.offices');
+        }
+    }
 
 
 }

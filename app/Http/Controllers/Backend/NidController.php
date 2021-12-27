@@ -35,7 +35,7 @@ class NidController extends Controller
         'address'=>$request->address
            
      ]);
-     return redirect()->back();
+     return redirect()->route('admin.nids');
     }
 
    
