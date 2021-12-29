@@ -15,7 +15,7 @@ class CreateNidlistsTable extends Migration
     {
         Schema::create('nidlists', function (Blueprint $table) {
             $table->id();
-            $table->double('nidnumber');
+            $table->string('nidnumber');
             $table->string('name');
             $table->string('fname');
             $table->string('mname');

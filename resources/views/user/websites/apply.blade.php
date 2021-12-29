@@ -1,6 +1,7 @@
 
 <h1 style="text-align:center;">You Have To Enter Your NID Number</h1> 
 
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -8,21 +9,27 @@
 
 <script src="https://code.jquery.com/jquery-2.1.0.min.js" ></script>
 <body>
+
 <div id="formWrapper">
 
 <div id="form">
 <div class="logo">
 <h1 class="text-center head">NID Number</h1>
 </div>
-		<div class="form-item">
-			<p class="formLabel">Enter your NID</p>
-			<input type="email" name="email" id="email" class="form-style" autocomplete="off"/>
-		</div>
+<div class="mb-3">
+	<form action="{{route('user.do.nidds')}}" method="post">
+		@csrf
+            <label for="exampleInputEmail1" class="form-label">Enter your NID number</label>
+            <input name="nidnumber" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div>
 		
 		<div class="form-item">
-		<input type="submit" class="login pull-right" value="Submit">
-		<div class="clear-fix"></div>
+		<!-- <input type="submit" class="login pull-right" value="Submit">
+		<div class="clear-fix"></div> -->
+		<a href="{{route('user.nidds.create')}}" class="btn btn-success">Submit</a>
 		</div>
+</form>
 </div>
 </div>
 

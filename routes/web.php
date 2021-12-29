@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\NidController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\contactController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,17 +20,28 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//user related work
 Route::get('/', function () {
     return view('user.main');
 
 });
 //Apply form show korar jonno
-Route::get('/applys',[UserController::class,'applyList'])->name('user.applys');
+// Route::get('/applys',[UserController::class,'applyList'])->name('user.applys');
 //contact table show korar jonno
 Route::get('/contacts',[ContactController::class,'contactList'])->name('user.contacts');
 
+Route::get('/nidds',[UserController::class,'niddList'])->name('user.nidds');  //form show koranor jonno
+Route::post('/verified',[UserController::class,'verified'])->name('user.do.nidds'); 
+Route::get('/nidds/create',[UserController::class,'niddCreate'])->name('user.nidds.create');   //form create korar jonno
+Route::post('/nidds/store',[NiddController::class,'store'])->name('user.nidds.store');   //database data submit korar jonno
 
+
+
+
+
+//end user panel related work
+
+//admin panel related work
 
 Route::group(['prefix'=>'admin-portal'],function(){
 
@@ -71,9 +83,7 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/nids/create',[NidController::class,'nidCreate'])->name('admin.nids.create');   //form create korar jonno
     Route::post('/nids/store',[NidController::class,'store'])->name('admin.nids.store');   //database data submit korar jonno
 
-    Route::get('/nidds',[NidController::class,'niddList'])->name('admin.nidds'); 
-    Route::get('/nidds/create',[NidController::class,'niddCreate'])->name('admin.nidds.create');   
-    Route::post('/nidds/store',[NidController::class,'store'])->name('admin.nidds.store'); 
+    
 });
 
 
