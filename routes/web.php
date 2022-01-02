@@ -73,6 +73,7 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/complaints',[ComplaintController::class,'complaintList'])->name('admin.complaints');
     Route::get('/complaints/create',[ComplaintController::class,'complaintCreate'])->name('admin.complaint_type.create');
     Route::post('/complaints/store',[ComplaintController::class,'store'])->name('admin.complaint_type.store');
+    Route::get('complaints/view/{complaint_id}',[ComplaintController::class,'complaintDetails'])->name('admin.complaint.details');
 
     Route::get('/complainers',[ComplainerController::class,'complainerList'])->name('admin.complainers');
     Route::get('/complainers/create',[ComplainerController::class,'complainerCreate'])->name('admin.complainer.create');

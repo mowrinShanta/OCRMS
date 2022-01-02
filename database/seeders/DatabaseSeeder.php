@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call([AdminTableSeeder::class]);
         $this->call([UserverificationTableSeeder::class]);
+        $this->call([NidTableSeeder::class]);
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\nidlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\facades\Auth;
 
 class UserController extends Controller
 {
@@ -19,17 +20,22 @@ class UserController extends Controller
     {
         
         $userInfo=$request->except('_token');
+        $userFind=nidlist::where('nidnumber',$userInfo)->get();
 //        $credentials['email']=$request->user_email;
 //        $credentials['password']=$request->user_password;
 //        dd($credentials);
 //        $credentials=$request->only('user_email','user_password');
 
 
-        if(Auth::attempt($userInfo)){
-            return redirect()->route('user')->with('message','Login successful.');
+        if(empty($userFind->all())){
+            return redirect()->back()->withErrors('Invalid user credentials');
+           
         }
-        return redirect()->back()->withErrors('Invalid user credentials');
-    }
+        else{
+            return redirect()->route('user.nidds.create')->with('message','Login successful.');
+        }
+        
+    } 
 
     public function niddCreate()
     {

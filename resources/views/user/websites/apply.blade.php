@@ -25,9 +25,9 @@
         </div>
 		
 		<div class="form-item">
-		<!-- <input type="submit" class="login pull-right" value="Submit">
-		<div class="clear-fix"></div> -->
-		<a href="{{route('user.nidds.create')}}" class="btn btn-success">Submit</a>
+		<button type="submit" class="btn btn-warning" >Submit</button>
+		<div class="clear-fix"></div>
+		<!-- <a href="{{route('user.nidds.create')}}" class="btn btn-success">Submit</a> -->
 		</div>
 </form>
 </div>

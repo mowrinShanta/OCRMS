@@ -40,6 +40,16 @@ class ComplaintController extends Controller
         return redirect()->route('admin.complaints');
     }
 
+    public function complaintDetails($complaint_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $complainttype=complaintlist::find($complaint_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.layouts.complaint-details',compact('complainttype'));
+    }
+
    
 
 
