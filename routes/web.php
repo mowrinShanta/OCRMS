@@ -33,8 +33,8 @@ Route::get('/contacts',[ContactController::class,'contactList'])->name('user.con
 Route::get('/nidds',[UserController::class,'niddList'])->name('user.nidds');  //form show koranor jonno
 Route::post('/verified',[UserController::class,'verified'])->name('user.do.nidds'); 
 Route::get('/nidds/create',[UserController::class,'niddCreate'])->name('user.nidds.create');   //form create korar jonno
-Route::post('/nidds/store',[NiddController::class,'store'])->name('user.nidds.store');   //database data submit korar jonno
-
+Route::post('/nidds/store',[UserController::class,'store'])->name('user.nidds.store');   //database data submit korar jonno
+Route::get('/confirmation',[UserController::class,'confirmationCreate'])->name('user.confirmation');
 
 
 

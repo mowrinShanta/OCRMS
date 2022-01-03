@@ -17,6 +17,7 @@
         <th scope="col">Complainer Phone</th>
         <th scope="col">Complainer Email</th>
         <th scope="col">Complainer Type</th>
+        <th scope="col">Complaint Details</th>
         <th scope="col">Problem Place Photo</th>
     </tr>
     </thead>

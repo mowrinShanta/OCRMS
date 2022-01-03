@@ -4,58 +4,71 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <body>
-<a href="{{route('user.nidds.store')}}"></a>
+
 <div class="row">
     <div class="col-md-6 col-sm-12 col-lg-6 col-md-offset-3">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Enter Your  NID Details Here
 			</div>
 			<div class="panel-body">
-				<form name="myform">
+				<form action="{{route('user.nidds.store')}}" method="post" >
+					@csrf
 					<div class="form-group">
-						<label for="myName">NID Number</label>
-						<input id="myName" name="nidnumber" class="form-control" type="text" data-validation="required">
+						<label for="myName">Issue Date</label>
+						<input id="date" name="date" class="form-control" type="date" data-validation="required">
 						<span id="error_name" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<label for="name">Name</label>
-						<input id="name" name="name" class="form-control" type="text" data-validation="email">
+						<label for="name">Issue Time</label>
+						<input id="time" name="time" class="form-control" type="time" data-validation="email">
 						<span id="error_lastname" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<label for="fname">Father name</label>
-						<input id="fname" name="fname"  class="form-control" type="text" min="1" >
+						<label for="name">Complainer Name</label>
+						<input id="name" name="name"  class="form-control" type="text" min="1" >
 						<span id="error_age" class="text-danger"></span>
 					</div>
 					
 					<div class="form-group">
-						<label for="mname">Mother name</label>
-						<input id="mname" name="mname"  class="form-control" type="text" min="1" >
+						<label for="address">Complainer Address</label>
+						<input id="address" name="address"  class="form-control" type="text" min="1" >
 						<span id="error_gender" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<label for="cell">Phone Number</label>
+						<label for="cell">Complainer Phone</label>
 						<input type="number" id="phone" name="cell" class="form-control" >
 						<span id="error_phone" class="text-danger"></span>
 					</div>
 					
 					<div class="form-group">
-						<label for="email">Email</label>
+						<label for="email">Complainer Email</label>
 						<input id="email" name="email"  class="form-control" type="email" min="1" >
 						<span id="error_age" class="text-danger"></span>
 					</div>
+					<div class="form-group">
+						<label for="email">Complaint Type</label>
+						<select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+        <option value="Parcel Number"> </option>
+        <option value="Parcel Number">Street Problem</option>
+        <option value="Receipt Number">Gas Problem</option>
+        <option value="Municipality">Electric Problem</option>
+        <option value="Municipality">Others</option>
+    </select>
+					</div>
+
 					
 
 					<div class="form-group">
-						<label for="dob">Date Of Birth *</label>
-						<input type="date" name="dob" id="dob" class="form-control">
-						<span id="error_dob" class="text-danger"></span>
+						<label for="disc">Description</label>
+						<textarea name="description" class="form-control" rows="3"></textarea>
+					</div>
+					<div class="form-group">
+						<label for="email">Problem Place Photo</label>
+						<input id="image" name="image"  class="form-control" type="file" min="1" >
+						<span id="error_age" class="text-danger"></span>
 					</div>
 
-					<div class="form-group">
-						<label for="disc">Discription</label>
-						<textarea class="form-control" rows="3"></textarea>
-					</div>
+
 					
 					<button id="submit" type="submit" value="submit" class="btn btn-primary center">Submit</button>
 			
@@ -66,6 +79,8 @@
 	</div>
 </div>
 
+
+       
 <style>
     	.palel-primary
 	{

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\complaintdetail;
 use App\Models\nidlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\Auth;
@@ -28,7 +29,7 @@ class UserController extends Controller
 
 
         if(empty($userFind->all())){
-            return redirect()->back()->withErrors('Invalid user credentials');
+            return redirect()->back()->with('sms','Invalid user credentials');
            
         }
         else{
@@ -44,22 +45,27 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        nidlist::create([
+        complaintdetail::create([
             //field name from DB ||  field name from form
-        'nidnumber'=>$request->nidnumber,
-       'name'=>$request->name,
-        'fname'=>$request->fname,
-        'mname'=>$request->mname,
+        'date'=>$request->date,
+       'time'=>$request->time,
+        'name'=>$request->name,
+        'address'=>$request->address,
         'cell'=>$request->cell,
         'email'=>$request->email,
-        'birthdate'=>$request->birthdate,
-        'address'=>$request->address
+        'complainttype'=>$request->complainttype,
+        'description'=>$request->description,
+        'image'=>$request->image
            
      ]);
-     return redirect()->route('user.nidds');
+     return redirect()->route('user.confirmation');
     }
 
- 
+     public function confirmationCreate()
+     {
+         return view('user.websites.confirmation-create');
+     }
+
 
 
 }

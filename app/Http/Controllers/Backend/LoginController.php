@@ -30,7 +30,7 @@ class LoginController extends Controller
        if(Auth::attempt($userInfo)){
            return redirect()->route('admin')->with('message','Login successful.');
        }
-       return redirect()->route('admin.login')->withErrors('Invalid user credentials');
+       return redirect()->route('admin.login')->with('sms','Invalid user credentials');
 
    }
 

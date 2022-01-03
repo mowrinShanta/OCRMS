@@ -13,6 +13,23 @@
 <div id="formWrapper">
 
 <div id="form">
+
+<!--confirmation with sms -->
+
+
+@if(session('message'))
+<div class="alert alert-danger">
+	{!!session('message')!!}
+</div>
+@endif
+
+
+@if(session('sms'))
+<div class="alert alert-danger">
+	{!!session('sms')!!}
+</div>
+@endif
+
 <div class="logo">
 <h1 class="text-center head">NID Number</h1>
 </div>
