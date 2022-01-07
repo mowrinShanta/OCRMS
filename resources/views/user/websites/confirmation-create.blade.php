@@ -7,11 +7,19 @@
 
 <div class="container">
 
+<img src="R.jpg" alt="street" width="250" height="200">
+<img src="B.jpg" alt="Gas" width="250" height="200">
+<img src="C.jpg" alt="Water" width="250" height="200">
+<img src="E.jpg" alt="Electricity" width="250" height="200">
+
+
 	<form class="form-signin">
 		<h1 class=".text-warning">Thank You</h1>
-		
-		<button class="btn btn-lg btn-primary btn-block" type="submit">
-			Sign In
+		 <br>
+    <b><p>We receive your complaint. You will get feedback of your complaint through email or phone as early as possible. If any types of information we need further we will contact with you.</p></b>
+     <br>
+		<button class="btn btn-lg btn-primary btn-success" type="submit">
+			PDF
 		</button>
 	</form>
 

@@ -35,9 +35,9 @@
     <td>{{$nidtype->address}} </td>
     </td>
     <td>
-    <a href="#" class="btn btn-primary">View</a>
-    <a href="#" class="btn btn-success">Edit</a> 
-    <a href="#" class="btn btn-danger">Delete</a>
+    <a class="btn btn-primary">View</a>
+    <a class="btn btn-success" href="{{route('admin.nids.edit',$nidtype->id)}}">Edit</a> 
+    <a class="btn btn-danger">Delete</a>
 </td>
     
     </tr>

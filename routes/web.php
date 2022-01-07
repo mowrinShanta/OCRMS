@@ -56,7 +56,7 @@ Route::group(['prefix'=>'admin-portal'],function(){
         return view('admin.master');
     })->name('admin');
 
- 
+    Route::get('/logout',[LoginController::class,'logOut'])->name('admin.logout');
    
 
 
@@ -83,7 +83,8 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/nids',[NidController::class,'nidList'])->name('admin.nids');  //form show koranor jonno
     Route::get('/nids/create',[NidController::class,'nidCreate'])->name('admin.nids.create');   //form create korar jonno
     Route::post('/nids/store',[NidController::class,'store'])->name('admin.nids.store');   //database data submit korar jonno
-
+    Route::get('/nids/edit/{id}',[NidController::class,'nidEdit'])->name('admin.nids.edit');
+    //Route::put('/nids/update/{id}',[NidController::class,'nidUpdate'])->name('admin.nids.update');
     
 });
 

@@ -19,6 +19,9 @@ class ComplaintController extends Controller
         return view('admin.layouts.complaint-create');
 
     }
+       
+    
+    
 
     public function store(Request $request){
         //dd($request->all());
@@ -29,6 +32,16 @@ class ComplaintController extends Controller
             $file->storeAs('/uploads',$filename);
         }
 //dd($request->all());
+
+$request->validate
+([
+    'complaintnumber'=>'required',
+    'complainttype'=>'required',
+    'complaintdetails'=>'required',
+    'image'=>'required',
+]);
+
+
         complaintlist::create([
             //field name from DB ||  field name from form
         'complaintnumber'=>$request->complaintnumber,

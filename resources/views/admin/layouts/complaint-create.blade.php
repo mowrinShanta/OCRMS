@@ -9,13 +9,13 @@
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Complaint Number</label>
-            <input name="complaintnumber" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input name="complaintnumber" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
 
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label" >Enter Complaint Type</label>
             
-        <select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+        <select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp"required>
         <option value="Parcel Number"> </option>
         <option value="Parcel Number">Street Problem</option>
         <option value="Receipt Number">Gas Problem</option>
@@ -26,7 +26,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Complaint Details</label>
-            <input name="complaintdetails" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input name="complaintdetails" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
 
         </div>
         <div class="mb-3">

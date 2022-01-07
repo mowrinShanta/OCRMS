@@ -38,8 +38,38 @@ class NidController extends Controller
      return redirect()->route('admin.nids');
     }
 
-   
+    public function nidEdit($id){
+        // dd($id);
+        $nidtype = nidlist::all();
+        $nidtype = nidlist::find($id);
+        if ($nidtype) {
+            return view('admin.layouts.update-nid',compact('nidtype'));
+        }
 
+    }
+
+   public function nidUpdate(Request $request,$id){
+        //dd($request->all());
+        //dd($id);
+       $nidtype = nidlist::find($id);
+       // dd($counciloroffice);
+       if ($nidtype) {
+           $nidtype->update([
+               'nidnumber'=>$request->nidnumber,
+            'name'=>$request->name,
+            'fname'=>$request->fname,
+            'mname'=>$request->mname,
+            'cell'=>$request->cell,
+            'email'=>$request->email,
+            'birthdate'=>$request->birthdate,
+            'address'=>$request->address,
+            ]);
+            return redirect()->route('admin.nids');
+        }
+    }
+
+   
+    
 
 
 }

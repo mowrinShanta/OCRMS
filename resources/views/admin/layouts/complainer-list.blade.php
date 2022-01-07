@@ -19,6 +19,7 @@
         <th scope="col">Complainer Type</th>
         <th scope="col">Complaint Details</th>
         <th scope="col">Problem Place Photo</th>
+        <th scope="col"><br>Action</br></th>
     </tr>
     </thead>
     <tbody>
