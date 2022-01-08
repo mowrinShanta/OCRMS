@@ -68,8 +68,21 @@ class NidController extends Controller
         }
     }
 
-   
-    
+    public function nidDetails($nidtype_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $nidtype=nidlist::find($nidtype_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.layouts.nid-details',compact('nidtype'));
+    }
+
+    public function nidDelete($nidtype_id)
+    {
+        nidlist::find($nidtype_id)->delete();
+       return redirect()->back()->with('success','Office detail Deleted.');
+    }
 
 
 }

@@ -11,7 +11,7 @@
 			<div class="panel-heading">Enter Your  NID Details Here
 			</div>
 			<div class="panel-body">
-				<form action="{{route('user.nidds.store')}}" method="post" >
+				<form action="{{route('user.nidds.store')}}" method="post" enctype= "multipart/form-data"   >
 					@csrf
 					<div class="form-group">
 						<label for="myName">Issue Date</label>

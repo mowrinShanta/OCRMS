@@ -30,7 +30,7 @@
     </td>
     <td>
     <a href="{{route('admin.complaint.details',$complainttype->id)}}" class="btn btn-primary">View</a>
-    <a href="#" class="btn btn-success">Edit</a> 
+    <a href="{{route('admin.complaint.edit',$complainttype->id)}}" class="btn btn-success">Edit</a> 
     <a href="#" class="btn btn-danger">Delete</a>
     </td>
     

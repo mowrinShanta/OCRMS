@@ -70,10 +70,15 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('offices/delete/{office_id}',[OfficeController::class,'officeDelete'])->name('admin.office.delete');
     Route::put('/offices/update/{id}',[OfficeController::class,'officeUpdate'])->name('admin.office.update');
     
+    
     Route::get('/complaints',[ComplaintController::class,'complaintList'])->name('admin.complaints');
     Route::get('/complaints/create',[ComplaintController::class,'complaintCreate'])->name('admin.complaint_type.create');
     Route::post('/complaints/store',[ComplaintController::class,'store'])->name('admin.complaint_type.store');
     Route::get('complaints/view/{complaint_id}',[ComplaintController::class,'complaintDetails'])->name('admin.complaint.details');
+    Route::get('/complaints/edit/{id}',[ComplaintController::class,'complaintEdit'])->name('admin.complaint.edit');
+    Route::put('/complaints/update/{id}',[ComplaintController::class,'complaintUpdate'])->name('admin.complaint.update');
+    Route::get('complaints/delete/{complaint_id}',[OfficeController::class,'officeDelete'])->name('admin.office.delete');
+
 
     Route::get('/complainers',[ComplainerController::class,'complainerList'])->name('admin.complainers');
     Route::get('/complainers/create',[ComplainerController::class,'complainerCreate'])->name('admin.complainer.create');
@@ -84,7 +89,9 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/nids/create',[NidController::class,'nidCreate'])->name('admin.nids.create');   //form create korar jonno
     Route::post('/nids/store',[NidController::class,'store'])->name('admin.nids.store');   //database data submit korar jonno
     Route::get('/nids/edit/{id}',[NidController::class,'nidEdit'])->name('admin.nids.edit');
-    //Route::put('/nids/update/{id}',[NidController::class,'nidUpdate'])->name('admin.nids.update');
+    Route::put('/nids/update/{id}',[NidController::class,'nidUpdate'])->name('admin.nids.update');
+    Route::get('nids/view/{nids_id}',[NidController::class,'nidDetails'])->name('admin.nids.details');
+    Route::get('nids/delete/{nids_id}',[NidController::class,'nidDelete'])->name('admin.nids.delete');
     
 });
 

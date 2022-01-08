@@ -40,11 +40,26 @@ class UserController extends Controller
 
     public function niddCreate()
     {
+        
         return view('user.websites.nids-create');
     }
 
     public function store(Request $request)
     {
+        $image_name=null;
+        //              step 1: check image exist in this request.
+                         if($request->hasFile('image'))
+                         {
+                             // step 2: generate file name
+                             $image_name=date('Ymdhms') .'.'. $request->file('image')->getClientOriginalExtension();
+        //  dd($image_name);
+                             //step 3 : store into project directory
+        
+                             $request->file('image')->storeAs('/uploads',$image_name);
+        
+                         }
+
+
         complaintdetail::create([
             //field name from DB ||  field name from form
         'date'=>$request->date,
@@ -55,7 +70,7 @@ class UserController extends Controller
         'email'=>$request->email,
         'complainttype'=>$request->complainttype,
         'description'=>$request->description,
-        'image'=>$request->image
+        'image'=>$image_name,
            
      ]);
      return redirect()->route('user.confirmation');

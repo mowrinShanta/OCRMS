@@ -23,8 +23,32 @@
     </tr>
     </thead>
     <tbody>
-   
+    @foreach($lists as $key=>$list)
+<tr>
+    <th>{{$key+1}}</th>
+    <td>{{$list->date}} </td>
+    <td>{{$list->time}} </td>
+    <td>{{$list->name}} </td>
+    <td>{{$list->address}} </td>
+    <td>{{$list->cell}} </td>
+    <td>{{$list->email}} </td>
+    <td>{{$list->complainttype}} </td>
+    <td>{{$list->description}} </td>
     
+    <td>
+        <img src="{{url('/uploads/'.$list->image)}}" width="100px" alt="image">
+    </td>
+    
+
+    <td>
+    <a href="#" class="btn btn-primary">View</a>
+    <a href="#" class="btn btn-success">Edit</a> 
+    <a href="#" class="btn btn-danger">Delete</a>
+    </td>
+    
+    </tr>
+
+@endforeach
     
     </tbody>
 </table>

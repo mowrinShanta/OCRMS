@@ -25,11 +25,12 @@ class ComplaintController extends Controller
 
     public function store(Request $request){
         //dd($request->all());
-       if($request->hasFile('image'))
-        {
+       if($request->hasFile('image'))  //image
+               {
             $file=$request->file('image');
             $filename=date('Ymdhms').'.'.$file->getClientOriginalExtension();
             $file->storeAs('/uploads',$filename);
+
         }
 //dd($request->all());
 
@@ -63,8 +64,32 @@ $request->validate
         return view('admin.layouts.complaint-details',compact('complainttype'));
     }
 
-   
+    public function complaintEdit($id){
+        // dd($id);
+        $complainttype = complaintlist::all();
+        $complainttype = complaintlist::find($id);
+        if ($complainttype) {
+            return view('admin.layouts.update-complaint',compact('complainttype'));
+        }
+
+    }
 
 
+    public function complaintUpdate(Request $request,$id){
+        //dd($request->all());
+        //dd($id);
+       $complainttype = complaintlist::find($id);
+       // dd($counciloroffice);
+       if ($complainttype) {
+           $complainttype->update([
+               'complaintnumber'=>$request->complaintnumber,
+            'complainttype'=>$request->complainttype,
+            'complaintdetails'=>$request->complaintdetails,
+            'image'=>$request->image,
+            ]);
+            return redirect()->route('admin.complaints');
+        }
+    }
+    
 
 }
