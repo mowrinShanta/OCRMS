@@ -16,11 +16,11 @@
             <label for="exampleInputEmail1" class="form-label" >Enter Complaint Type</label>
             
         <select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp"required>
-        <option value="Parcel Number"> </option>
-        <option value="Parcel Number">Street Problem</option>
-        <option value="Receipt Number">Gas Problem</option>
-        <option value="Municipality">Electric Problem</option>
-        <option value="Municipality">Others</option>
+        <option> </option>
+        <option>Street Problem</option>
+        <option>Gas Problem</option>
+        <option>Electric Problem</option>
+        <option>Others</option>
     </select>
 
         </div>

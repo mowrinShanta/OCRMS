@@ -54,12 +54,12 @@ $request->validate
         return redirect()->route('admin.complaints');
     }
 
-    public function complaintDetails($complaint_id)
+    public function complaintDetails($complainttype_id)
     {
 
 //        collection= get(), all()====== read with loop (foreach)
 //       object= first(), find(), findOrFail(),======direct
-      $complainttype=complaintlist::find($complaint_id);
+      $complainttype=complaintlist::find($complainttype_id);
 //      $product=Product::where('id',$product_id)->first();
         return view('admin.layouts.complaint-details',compact('complainttype'));
     }
@@ -90,6 +90,12 @@ $request->validate
             return redirect()->route('admin.complaints');
         }
     }
-    
+    public function complaintDelete($complainttype_id)
+    {
+        complaintlist::find($complainttype_id)->delete();
+       return redirect()->back()->with('success','Office detail Deleted.');
+    }
+
+
 
 }

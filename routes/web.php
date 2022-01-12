@@ -35,6 +35,8 @@ Route::post('/verified',[UserController::class,'verified'])->name('user.do.nidds
 Route::get('/nidds/create',[UserController::class,'niddCreate'])->name('user.nidds.create');   //form create korar jonno
 Route::post('/nidds/store',[UserController::class,'store'])->name('user.nidds.store');   //database data submit korar jonno
 Route::get('/confirmation',[UserController::class,'confirmationCreate'])->name('user.confirmation');
+Route::get('/table',[UserController::class,'complainerTable'])->name('admin.complainer.table');
+
 
 
 
@@ -77,12 +79,18 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('complaints/view/{complaint_id}',[ComplaintController::class,'complaintDetails'])->name('admin.complaint.details');
     Route::get('/complaints/edit/{id}',[ComplaintController::class,'complaintEdit'])->name('admin.complaint.edit');
     Route::put('/complaints/update/{id}',[ComplaintController::class,'complaintUpdate'])->name('admin.complaint.update');
-    Route::get('complaints/delete/{complaint_id}',[OfficeController::class,'officeDelete'])->name('admin.office.delete');
+    Route::get('complaints/delete/{complaint_id}',[ComplaintController::class,'complaintDelete'])->name('admin.complaint.delete');
 
 
     Route::get('/complainers',[ComplainerController::class,'complainerList'])->name('admin.complainers');
     Route::get('/complainers/create',[ComplainerController::class,'complainerCreate'])->name('admin.complainer.create');
     Route::post('/complainers/store',[ComplainerController::class,'store'])->name('admin.complainer.store');
+    Route::get('complainers/view/{complainer_id}',[ComplainerController::class,'complainertDetails'])->name('admin.complainer.details');
+    Route::get('/complainers/edit/{id}',[ComplainerController::class,'complainerEdit'])->name('admin.complainer.edit');
+    Route::put('/complainers/update/{id}',[ComplainerController::class,'complainerUpdate'])->name('admin.complainer.update');
+    Route::get('complainers/delete/{complainer_id}',[ComplainerController::class,'complainerDelete'])->name('admin.complainer.delete');
+
+
 
 //Nid information
     Route::get('/nids',[NidController::class,'nidList'])->name('admin.nids');  //form show koranor jonno

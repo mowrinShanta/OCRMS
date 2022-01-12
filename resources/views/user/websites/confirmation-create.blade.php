@@ -18,9 +18,9 @@
 		 <br>
     <b><p>We receive your complaint. You will get feedback of your complaint through email or phone as early as possible. If any types of information we need further we will contact with you.</p></b>
      <br>
-		<button class="btn btn-lg btn-primary btn-success" type="submit">
-			PDF
-		</button>
+		<button class="btn btn-success" style="text-colour:white;"><a href="{{route('admin.complainer.table')}}">PDF</a></button>
+		
+		
 	</form>
 
 </div>

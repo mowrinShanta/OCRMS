@@ -11,43 +11,44 @@
 			<div class="panel-heading">Enter Your  NID Details Here
 			</div>
 			<div class="panel-body">
-				<form action="{{route('user.nidds.store')}}" method="post" enctype= "multipart/form-data"   >
+				<form action="{{route('admin.complainer.update',$list->id)}}" enctype= "multipart/form-data"  method="POST" >
 					@csrf
+                    @method('put')
 					<div class="form-group">
 						<label for="myName">Issue Date</label>
-						<input id="date" name="date" class="form-control" type="date" data-validation="required">
+						<input id="date" value="{{$list->date}}" name="date" class="form-control" type="date" data-validation="required">
 						<span id="error_name" class="text-danger"></span>
 					</div>
 					<div class="form-group">
 						<label for="name">Issue Time</label>
-						<input id="time" name="time" class="form-control" type="time" data-validation="email">
+						<input id="time" value="{{$list->time}}" name="time" class="form-control" type="time" data-validation="email">
 						<span id="error_lastname" class="text-danger"></span>
 					</div>
 					<div class="form-group">
 						<label for="name">Complainer Name</label>
-						<input id="name" name="name"  class="form-control" type="text" min="1" >
+						<input id="name" value="{{$list->name}}" name="name"  class="form-control" type="text" min="1" >
 						<span id="error_age" class="text-danger"></span>
 					</div>
 					
 					<div class="form-group">
 						<label for="address">Complainer Address</label>
-						<input id="address" name="address"  class="form-control" type="text" min="1" >
+						<input id="address" value="{{$list->address}}" name="address"  class="form-control" type="text" min="1" >
 						<span id="error_gender" class="text-danger"></span>
 					</div>
 					<div class="form-group">
 						<label for="cell">Complainer Phone</label>
-						<input type="number" id="phone" name="cell" class="form-control" >
+						<input type="number" id="phone" value="{{$list->cell}}" name="cell" class="form-control" >
 						<span id="error_phone" class="text-danger"></span>
 					</div>
 					
 					<div class="form-group">
 						<label for="email">Complainer Email</label>
-						<input id="email" name="email"  class="form-control" type="email" min="1" >
+						<input id="email" value="{{$list->email}}" name="email"  class="form-control" type="email" min="1" >
 						<span id="error_age" class="text-danger"></span>
 					</div>
 					<div class="form-group">
 						<label for="email">Complaint Type</label>
-						<select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+						<select value="{{$list->complainttype}}" name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
 						<option> </option>
         <option>Street Problem</option>
         <option>Gas Problem</option>
@@ -60,11 +61,11 @@
 
 					<div class="form-group">
 						<label for="disc">Description</label>
-						<textarea name="description" class="form-control" rows="3"></textarea>
+						<textarea value="{{$list->description}}" name="description" class="form-control" rows="3"></textarea>
 					</div>
 					<div class="form-group">
 						<label for="email">Problem Place Photo</label>
-						<input id="image" name="image"  class="form-control" type="file" min="1" >
+						<input id="image" value="{{$list->image}}" name="image"  class="form-control" type="file" min="1" >
 						<span id="error_age" class="text-danger"></span>
 					</div>
 

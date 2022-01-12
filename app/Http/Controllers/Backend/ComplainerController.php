@@ -15,6 +15,48 @@ class ComplainerController extends Controller
         return view('admin.layouts.complainer-list' ,compact('lists'));
     }
     
+    public function complainertDetails($list_id)
+    {
 
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $list=complaintdetail::find($list_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.layouts.complainer-details',compact('list'));
+    }
+    public function complainerEdit($id){
+        // dd($id);
+        $list = complaintdetail::all();
+        $list = complaintdetail::find($id);
+        if ($list) {
+            return view('admin.layouts.update-complainer',compact('list'));
+        }
 
+    }
+    public function complainerUpdate(Request $request,$id){
+        //dd($request->all());
+        //dd($id);
+       $list = complaintdetail::find($id);
+       // dd($counciloroffice);
+       if ($list) {
+           $list->update([
+               'date'=>$request->date,
+            'time'=>$request->time,
+            'name'=>$request->name,
+            'address'=>$request->address,
+            'cell'=>$request->cell,
+            'email'=>$request->email,
+            'complainttype'=>$request->complainttype,
+            'description'=>$request->description,
+            'image'=>$request->image,
+            ]);
+            return redirect()->route('admin.complainers');
+        }
+    }
+
+    public function complainerDelete($list_id)
+    {
+        complaintdetail::find($list_id)->delete();
+       return redirect()->back()->with('success','Office detail Deleted.');
+    }
 }

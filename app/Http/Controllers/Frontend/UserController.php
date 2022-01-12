@@ -81,6 +81,12 @@ class UserController extends Controller
          return view('user.websites.confirmation-create');
      }
 
+     public function complainerTable()
+     {
+         $informations=complaintdetail::all();
+         return view('user.websites.pdf',compact('informations'));
+     }
+
 
 
 }
