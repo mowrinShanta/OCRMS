@@ -87,6 +87,14 @@ class UserController extends Controller
          return view('user.websites.pdf',compact('informations'));
      }
 
-
+     public function complainerDetails($information_id)
+     {
+ 
+ //        collection= get(), all()====== read with loop (foreach)
+ //       object= first(), find(), findOrFail(),======direct
+       $information=complaintdetail::find($information_id);
+ //      $product=Product::where('id',$product_id)->first();
+         return view('user.websites.complainers-details',compact('information'));
+     }
 
 }

@@ -35,7 +35,10 @@ Route::post('/verified',[UserController::class,'verified'])->name('user.do.nidds
 Route::get('/nidds/create',[UserController::class,'niddCreate'])->name('user.nidds.create');   //form create korar jonno
 Route::post('/nidds/store',[UserController::class,'store'])->name('user.nidds.store');   //database data submit korar jonno
 Route::get('/confirmation',[UserController::class,'confirmationCreate'])->name('user.confirmation');
+
+
 Route::get('/table',[UserController::class,'complainerTable'])->name('admin.complainer.table');
+Route::get('complainer/view/{complainer_id}',[UserController::class,'complainerDetails'])->name('admin.complainer.details');
 
 
 

@@ -9,10 +9,24 @@ use Illuminate\Http\Request;
 class OfficeController extends Controller
 {
 
-    public function officeList()
+    public function officeList(Request $request)
     {
         $lists=counciloroffice::all(); //table r sob dekhanor jonno
+
+        $search = $request->query('search');
+        // dd($search);
+        // dd(request()->all());
+        if ($search) {
+            $lists = counciloroffice::where('name', 'Like', '%' . $search . '%')
+                ->orWhere('name', 'like', '%' . $search . '%')->get();
+                // dd('in if');
+            return view('admin.layouts.office-list', compact('lists'));
+        }
+        else{
         return view('admin.layouts.office-list' ,compact('lists'));
+
+        }
+       
     }
 
     public function officeCreate()
