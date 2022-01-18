@@ -24,6 +24,7 @@ class CreateComplaintdetailsTable extends Migration
             $table->string('complainttype');
             $table->string('description');
             $table->string('image');
+            // $table->string('case_status')->default('pending');
             $table->timestamps();
         });
     }

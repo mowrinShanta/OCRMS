@@ -26,7 +26,8 @@
     <thead>
     <tr>
         <th scope="col">No.</th>
-        <th scope="col"> Name</th>
+        <th scope="col">Office Name</th>
+        <th scope="col"> Officer Name</th>
         <!-- <th scope="col">Address</th> -->
         <th scope="col">Telephone</th>
         <th scope="col"> Cell</th>
@@ -39,6 +40,7 @@
     <tr>
     <th>{{$key+1}}</th>
     <td>{{$counciloroffice->name}} </td>
+    <td>{{$counciloroffice->oname}} </td>
     <!-- <td>{{$counciloroffice->address}} </td> -->
     <td>{{$counciloroffice->telephone}} </td>
     <td>{{$counciloroffice->cell}} </td>

@@ -6,6 +6,7 @@
 
     
 <p>Name: {{$office->name}}</p>
+<p>Name: {{$office->oname}}</p>
 <p>Address: {{$office->address}}</p>
 <p>Telephone: {{$office->telephone}}</p>
 <p>Cell: {{$office->cell}}</p>

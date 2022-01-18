@@ -5,16 +5,18 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\complaintdetail;
 use App\Models\nidlist;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\Auth;
 
 class UserController extends Controller
 {
 
-    public function niddList()
+    
+    public function registrationForm()
     {
         //$lists=counciloroffice::all(); //table r sob dekhanor jonno
-        return view('user.websites.apply');
+        return view('user.websites.registration');
     }
 
     public function verified(Request $request)
@@ -83,18 +85,44 @@ class UserController extends Controller
 
      public function complainerTable()
      {
-         $informations=complaintdetail::all();
+        $informations = complaintdetail::orderBy('id','desc')->paginate(1);
          return view('user.websites.pdf',compact('informations'));
      }
 
-     public function complainerDetails($information_id)
-     {
- 
- //        collection= get(), all()====== read with loop (foreach)
- //       object= first(), find(), findOrFail(),======direct
-       $information=complaintdetail::find($information_id);
- //      $product=Product::where('id',$product_id)->first();
-         return view('user.websites.complainers-details',compact('information'));
-     }
+
+
+// public function status_solved($id){
+//         $content = complaintdetail::find($id);
+//         if($content->case_status)
+//         {
+//             $content->update([
+//                 'case_status' => 'solved'
+//             ]);
+//         }
+    
+//         return redirect()->back()->with('success','Case Solved');
+//     }
+
+
+//     public function InfoDelete($id)
+//     {
+//         complaintdetail::find($id)->delete();
+//        return redirect()->back()->with('success','Policestation is Deleted.');
+//     }
+    //registration form
+    public function storage(Request $request){
+        // dd($request->all());
+       
+
+          User::create([
+            //field name from DB ||  field name from form
+        'name'=>$request->username,
+        'password'=>bcrypt($request->password),
+        'email'=>$request->email,
+        'cell'=>$request->cell,
+           
+      ]);
+      return redirect()->back();
+    }
 
 }

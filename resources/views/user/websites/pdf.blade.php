@@ -135,10 +135,6 @@
     <td>{{$information->description}} </td>
     <td>{{$information->image}} </td>
     
-    <td>
-    <a href="{{route('admin.complainer.details',$list->id)}}" class="btn btn-primary">View</a>
-    </td>
-    
     </tr>
 
 @endforeach

@@ -13,6 +13,11 @@
 
         </div>
         <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Councilor Officer Name</label>
+            <input name="oname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+
+        </div>
+        <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Address</label>
             <input name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 

@@ -68,6 +68,47 @@
 						<span id="error_age" class="text-danger"></span>
 					</div>
 
+					<div class="form-group">
+						<label for="email">Office Name</label>
+						<select name="oname" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+						<option> </option>
+        <option>Uttara sector 10(kamarpara councilor office)</option>
+        <option>Dhaka North City Corporation</option>
+        <option>Dhaka South City Corporation</option>
+        <option>Others</option>
+    </select>
+					</div>
+					<div class="form-group">
+						<label for="email">Officer Name</label>
+						<select name="orname" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+						<option> </option>
+        <option>Uttara sector 10(kamarpara councilor office)</option>
+        <option>Gas Problem</option>
+        <option>Electric Problem</option>
+        <option>Others</option>
+    </select>
+					</div>
+					<div class="form-group">
+						<label for="email">Complaint Type</label>
+						<select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+						<option> </option>
+        <option>Street Problem</option>
+        <option>Gas Problem</option>
+        <option>Electric Problem</option>
+        <option>Others</option>
+    </select>
+					</div>
+					<div class="form-group">
+						<label for="email">Complaint Type</label>
+						<select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+						<option> </option>
+        <option>Street Problem</option>
+        <option>Gas Problem</option>
+        <option>Electric Problem</option>
+        <option>Others</option>
+    </select>
+					</div>
+
 
 					
 					<button id="submit" type="submit" value="submit" class="btn btn-primary center">Submit</button>

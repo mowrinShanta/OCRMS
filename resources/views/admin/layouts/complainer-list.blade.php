@@ -19,6 +19,10 @@
         <th scope="col">Complaint Type</th>
         <th scope="col">Complaint Details</th>
         <th scope="col">Problem Place Photo</th>
+        <th scope="col">Office Name</th>
+        <th scope="col">Officer Name</th>
+        <th scope="col">Officer Email</th>
+        <th scope="col">Officer Phone</th>
         <th scope="col"><br>Action</br></th>
     </tr>
     </thead>

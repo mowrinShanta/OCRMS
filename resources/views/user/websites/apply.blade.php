@@ -36,10 +36,18 @@
 <div class="mb-3">
 	<form action="{{route('user.do.nidds')}}" method="post">
 		@csrf
-            <label for="exampleInputEmail1" class="form-label">Enter your NID number</label>
-            <input name="nidnumber" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+		
+		<label for="exampleInputEmail1" class="form-label">Enter your Username</label>
+            <input name="usernsme" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         </div>
+		<div>
+            <label for="exampleInputEmail1" class="form-label">Enter your password</label>
+            <input name="password" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div>
+		
+		<br>
 		
 		<div class="form-item">
 		<button type="submit" class="btn btn-warning" >Submit</button>

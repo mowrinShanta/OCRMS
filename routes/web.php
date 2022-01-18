@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\Backend\OfficeController;
+use App\Http\Controllers\Backend\ContentController;
 use App\Http\Controllers\Backend\ComplaintController;
 use App\Http\Controllers\Backend\ComplainerController;
 use App\Http\Controllers\Backend\NidController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Frontend\UserloginController;
 use App\Http\Controllers\Frontend\contactController;
 
 use Illuminate\Support\Facades\Route;
@@ -21,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //user related work
+Route::get('/nidds',[UserloginController::class,'niddList'])->name('user.nidds');  
+Route::post('/verified',[UserloginController::class,'verified'])->name('user.do.nidds'); 
 Route::get('/', function () {
     return view('user.main');
 
@@ -30,15 +34,17 @@ Route::get('/', function () {
 //contact table show korar jonno
 Route::get('/contacts',[ContactController::class,'contactList'])->name('user.contacts');
 
-Route::get('/nidds',[UserController::class,'niddList'])->name('user.nidds');  //form show koranor jonno
-Route::post('/verified',[UserController::class,'verified'])->name('user.do.nidds'); 
+
+Route::get('/registration',[UserController::class,'registrationForm'])->name('user.registration'); 
+Route::post('/registration/storage',[UserController::class,'storage'])->name('user.registration.storage');
+
 Route::get('/nidds/create',[UserController::class,'niddCreate'])->name('user.nidds.create');   //form create korar jonno
 Route::post('/nidds/store',[UserController::class,'store'])->name('user.nidds.store');   //database data submit korar jonno
 Route::get('/confirmation',[UserController::class,'confirmationCreate'])->name('user.confirmation');
 
 
 Route::get('/table',[UserController::class,'complainerTable'])->name('admin.complainer.table');
-Route::get('complainer/view/{complainer_id}',[UserController::class,'complainerDetails'])->name('admin.complainer.details');
+
 
 
 
@@ -103,6 +109,11 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::put('/nids/update/{id}',[NidController::class,'nidUpdate'])->name('admin.nids.update');
     Route::get('nids/view/{nids_id}',[NidController::class,'nidDetails'])->name('admin.nids.details');
     Route::get('nids/delete/{nids_id}',[NidController::class,'nidDelete'])->name('admin.nids.delete');
+
+
+    Route::get('/content',[ContentController::class,'contentList'])->name('admin.content');
+    
+    
     
 });
 
