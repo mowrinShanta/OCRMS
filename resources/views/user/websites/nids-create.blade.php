@@ -34,17 +34,8 @@
 						<input id="address" name="address"  class="form-control" type="text" min="1" >
 						<span id="error_gender" class="text-danger"></span>
 					</div>
-					<div class="form-group">
-						<label for="cell">Complainer Phone</label>
-						<input type="number" id="phone" name="cell" class="form-control" >
-						<span id="error_phone" class="text-danger"></span>
-					</div>
 					
-					<div class="form-group">
-						<label for="email">Complainer Email</label>
-						<input id="email" name="email"  class="form-control" type="email" min="1" >
-						<span id="error_age" class="text-danger"></span>
-					</div>
+
 					<div class="form-group">
 						<label for="email">Complaint Type</label>
 						<select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -82,29 +73,29 @@
 						<label for="email">Officer Name</label>
 						<select name="orname" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
 						<option> </option>
-        <option>Uttara sector 10(kamarpara councilor office)</option>
-        <option>Gas Problem</option>
-        <option>Electric Problem</option>
+        <option>Sonia Rahman(Uttara sector 10)</option>
+        <option>Rahela Khatun(Dhaka North City Corporation)</option>
+        <option>Mahabubur Rahman(Dhaka South City Corporation)</option>
         <option>Others</option>
     </select>
 					</div>
 					<div class="form-group">
-						<label for="email">Complaint Type</label>
-						<select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+						<label for="email">Officer Email</label>
+						<select name="email" type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
 						<option> </option>
-        <option>Street Problem</option>
-        <option>Gas Problem</option>
-        <option>Electric Problem</option>
+        <option>info@shataj.com(Sonia Rahman)</option>
+        <option>rahelarinku21@gmail.com(Rahela Khatun)</option>
+        <option>sento@shataj.com(Mahabubur Rahman)</option>
         <option>Others</option>
     </select>
 					</div>
 					<div class="form-group">
-						<label for="email">Complaint Type</label>
-						<select name="complainttype" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+						<label for="cell">Officer Phone</label>
+						<select name="cell" type="text" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
 						<option> </option>
-        <option>Street Problem</option>
-        <option>Gas Problem</option>
-        <option>Electric Problem</option>
+        <option>01676680455(Sonia Rahman)</option>
+        <option>0181500351(Rahela Khatun)</option>
+        <option>01711942622(Mahabubur Rahman)</option>
         <option>Others</option>
     </select>
 					</div>

@@ -14,15 +14,13 @@
         <!-- <th scope="col">Issue Time</th> -->
         <th scope="col">Complainer Name</th>
         <!-- <th scope="col">Complainer Address</th> -->
-        <th scope="col">Complainer Phone</th>
-        <!-- <th scope="col">Complainer Email</th> -->
         <th scope="col">Complaint Type</th>
         <th scope="col">Complaint Details</th>
         <th scope="col">Problem Place Photo</th>
         <th scope="col">Office Name</th>
         <th scope="col">Officer Name</th>
-        <th scope="col">Officer Email</th>
-        <th scope="col">Officer Phone</th>
+        <!-- <th scope="col">Officer Email</th>
+        <th scope="col">Officer Phone</th> -->
         <th scope="col"><br>Action</br></th>
     </tr>
     </thead>
@@ -34,15 +32,16 @@
     <!-- <td>{{$list->time}} </td> -->
     <td>{{$list->name}} </td>
     <!-- <td>{{$list->address}} </td> -->
-    <td>{{$list->cell}} </td>
-    <!-- <td>{{$list->email}} </td> -->
     <td>{{$list->complainttype}} </td>
     <td>{{$list->description}} </td>
     
     <td>
         <img src="{{url('/uploads/'.$list->image)}}" width="100px" alt="image">
     </td>
-    
+    <td>{{$list->oname}} </td>
+    <td>{{$list->orname}} </td>
+    <!-- <td>{{$list->email}} </td>
+    <td>{{$list->cell}} </td> -->
 
     <td>
     <a href="{{route('admin.complainer.details',$list->id)}}" class="btn btn-primary">View</a>

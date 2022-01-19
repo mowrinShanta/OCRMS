@@ -10,7 +10,7 @@ class complaintlist extends Model
     use HasFactory;
 
     protected $table="complaintlists";
-    protected $fillable=['complaintnumber','complainttype','complaintdetails','image'];
+    protected $guarded=[];
 
 
 }

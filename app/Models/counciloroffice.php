@@ -9,7 +9,7 @@ class Counciloroffice extends Model
 {
     use HasFactory;
 
-    protected $fillable=['name','address','telephone','cell','email'];
+    protected $guarded=[];
 
 
     

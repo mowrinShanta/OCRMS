@@ -48,6 +48,7 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $image_name=null;
         //              step 1: check image exist in this request.
                          if($request->hasFile('image'))
@@ -68,11 +69,13 @@ class UserController extends Controller
        'time'=>$request->time,
         'name'=>$request->name,
         'address'=>$request->address,
-        'cell'=>$request->cell,
-        'email'=>$request->email,
         'complainttype'=>$request->complainttype,
         'description'=>$request->description,
         'image'=>$image_name,
+        'oname'=>$request->oname,
+        'orname'=>$request->orname,
+        'email'=>$request->email,
+        'cell'=>$request->cell,
            
      ]);
      return redirect()->route('user.confirmation');
@@ -111,12 +114,12 @@ class UserController extends Controller
 //     }
     //registration form
     public function storage(Request $request){
-        // dd($request->all());
+        //  dd($request->all());
        
 
           User::create([
             //field name from DB ||  field name from form
-        'name'=>$request->username,
+        'name'=>$request->name,
         'password'=>bcrypt($request->password),
         'email'=>$request->email,
         'cell'=>$request->cell,
@@ -126,3 +129,4 @@ class UserController extends Controller
     }
 
 }
+

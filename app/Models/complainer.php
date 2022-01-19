@@ -9,7 +9,7 @@ class complainer extends Model
 {
     use HasFactory;
 
-    protected $fillable=['date','time','name','address','cell','email','complainttype','description','image'];
+    protected $guarded=[];
 }
 
 

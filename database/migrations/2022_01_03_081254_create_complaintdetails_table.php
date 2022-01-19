@@ -19,11 +19,13 @@ class CreateComplaintdetailsTable extends Migration
             $table->string('time');
             $table->string('name');
             $table->string('address');
-            $table->integer('cell');
-            $table->string('email');
             $table->string('complainttype');
             $table->string('description');
             $table->string('image');
+            $table->string('oname');
+            $table->string('orname');
+            $table->string('email');
+            $table->string('cell');
             // $table->string('case_status')->default('pending');
             $table->timestamps();
         });

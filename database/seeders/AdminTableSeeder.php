@@ -18,7 +18,9 @@ class AdminTableSeeder extends Seeder
             'name'=>'remi',
             'password'=>bcrypt('54321'),
             'email'=>'Remi@gmail.com',
-            'cell'=>'1234567'
+            'cell'=>'1234567',
+            'role'=>'admin'
+
             
         ]);
     }

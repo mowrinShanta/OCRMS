@@ -9,13 +9,14 @@
 <p>Issue Time: {{$list->time}}</p>
 <p>Complainer Name: {{$list->name}}</p>
 <p>Complainer Address: {{$list->address}}</p>
-<p>Complainer Phone: {{$list->cell}}</p>
-<p>Complainer Email: {{$list->email}}</p>
 <p>Complaint Type: {{$list->complainttype}}</p>
 <p>Complaint Details: {{$list->description}}</p>
 <p>Problem Place Photo: {{$list->image}}</p>
+<p>Office Name: {{$list->oname}}</p>
+<p>Officer Name: {{$list->orname}}</p>
+<p>Officer Email: {{$list->email}}</p>
+<p>Officer Phone: {{$list->cell}}</p>
 
 
 
 @endsection
-

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class Userlogin
+class Adminlogin
 {
     /**
      * Handle an incoming request.
@@ -16,13 +16,12 @@ class Userlogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->user()->role=='user')
+        if(auth()->admin()->role=='admin')
         {
             return $next($request);
         }
         else{
-            return redirect()->route('user')->with('success','Permission denied!!');
+            return redirect()->route('admin')->with('success','Permission denied!!');
         }
-        
     }
 }

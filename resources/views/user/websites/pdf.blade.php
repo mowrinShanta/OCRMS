@@ -155,7 +155,7 @@
 <br>
 
 <input class="btn btn-primary" type="button" onClick="PrintDiv();" value="Print">
-
+<a href="{{route('user.logout')}}" class="btn btn-success">Logout</a>
 
 
 

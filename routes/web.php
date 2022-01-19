@@ -22,13 +22,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//user related work
+Route::group(['prefix'=>'user'],function(){
+
+//user related work user login
 Route::get('/nidds',[UserloginController::class,'niddList'])->name('user.nidds');  
 Route::post('/verified',[UserloginController::class,'verified'])->name('user.do.nidds'); 
 Route::get('/', function () {
     return view('user.main');
 
-});
+})->name('user');
 //Apply form show korar jonno
 // Route::get('/applys',[UserController::class,'applyList'])->name('user.applys');
 //contact table show korar jonno
@@ -38,6 +40,10 @@ Route::get('/contacts',[ContactController::class,'contactList'])->name('user.con
 Route::get('/registration',[UserController::class,'registrationForm'])->name('user.registration'); 
 Route::post('/registration/storage',[UserController::class,'storage'])->name('user.registration.storage');
 
+Route::group(['middleware'=>['auth' ,'Userlogin']],function (){
+    
+    Route::get('/logout',[UserloginController::class,'logOut'])->name('user.logout');
+
 Route::get('/nidds/create',[UserController::class,'niddCreate'])->name('user.nidds.create');   //form create korar jonno
 Route::post('/nidds/store',[UserController::class,'store'])->name('user.nidds.store');   //database data submit korar jonno
 Route::get('/confirmation',[UserController::class,'confirmationCreate'])->name('user.confirmation');
@@ -45,6 +51,9 @@ Route::get('/confirmation',[UserController::class,'confirmationCreate'])->name('
 
 Route::get('/table',[UserController::class,'complainerTable'])->name('admin.complainer.table');
 
+
+});
+});
 
 
 
@@ -62,7 +71,8 @@ Route::group(['prefix'=>'admin-portal'],function(){
        
     //end login
     
-    Route::group(['middleware'=>'auth'],function (){
+    Route::group(['middleware'=>['auth' ,'Adminlogin']],function (){
+
        Route::get('/', function () {
         return view('admin.master');
     })->name('admin');

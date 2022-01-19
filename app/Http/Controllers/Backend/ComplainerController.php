@@ -44,11 +44,13 @@ class ComplainerController extends Controller
             'time'=>$request->time,
             'name'=>$request->name,
             'address'=>$request->address,
-            'cell'=>$request->cell,
-            'email'=>$request->email,
             'complainttype'=>$request->complainttype,
             'description'=>$request->description,
             'image'=>$request->image,
+            'oname'=>$request->oname,
+            'orname'=>$request->orname,
+            'email'=>$request->email,
+            'cell'=>$request->cell,
             ]);
             return redirect()->route('admin.complainers');
         }
