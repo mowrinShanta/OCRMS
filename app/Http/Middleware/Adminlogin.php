@@ -16,12 +16,13 @@ class Adminlogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->admin()->role=='admin')
+       
+        if(auth()->user()->role=='admin')
         {
             return $next($request);
         }
         else{
-            return redirect()->route('admin')->with('success','Permission denied!!');
+            return redirect()->route('admin.login')->with('success','Permission denied!!');
         }
     }
 }
