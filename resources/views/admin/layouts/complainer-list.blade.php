@@ -5,6 +5,21 @@
 
 <h1>Complainer list</h1>
 
+<!-- search -->
+<form action="{{route('admin.complainers')}}">
+<div class="input-group rounded mt-3 mb-2">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
+    <!-- <label class="form-label" for="form1">Search</label> -->
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+</form>
+
+<!-- end search -->
 
 <table class="table">
     <thead>

@@ -1,5 +1,5 @@
 
-<h1 style="text-align:center;">You Have To Enter Your NID Number</h1> 
+<h1 style="text-align:center;">You Have To Login </h1> 
 
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -31,7 +31,7 @@
 @endif
 
 <div class="logo">
-<h1 class="text-center head">NID Number</h1>
+<h1 class="text-center head">Login</h1>
 </div>
 <div class="mb-3">
 	<form action="{{route('user.do.nidds')}}" method="post">

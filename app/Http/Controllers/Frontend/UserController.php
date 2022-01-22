@@ -91,6 +91,8 @@ class UserController extends Controller
         $informations = complaintdetail::orderBy('id','desc')->paginate(1);
          return view('user.websites.pdf',compact('informations'));
      }
+    
+
 
 
 
@@ -127,6 +129,9 @@ class UserController extends Controller
       ]);
       return redirect()->back();
     }
+
+
+    
 
 }
 

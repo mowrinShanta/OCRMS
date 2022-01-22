@@ -20,9 +20,7 @@
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
-					<div class="brand_logo_container">
-						<img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-circle-logo-png-transparent.png" class="brand_logo" alt="Logo">
-					</div>
+					
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form action="{{route('admin.do.logIn')}}" method="POST">
@@ -76,7 +74,7 @@
 			background: #60a3bc !important;
 		}
 		.user_card {
-			height: 400px;
+			height: 300px;
 			width: 350px;
 			margin-top: auto;
 			margin-bottom: auto;

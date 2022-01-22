@@ -9,10 +9,25 @@ use Illuminate\Http\Request;
 class ComplaintController extends Controller
 {
 
-    public function complaintList()
+    public function complaintList(Request $request)
     {
         $types=complaintlist::all(); //table r sob dekhanor jonno
-        return view('admin.layouts.complaint-list' ,compact('types'));
+
+        $search = $request->query('search');
+        // dd($search);
+        // dd(request()->all());
+        if ($search) {
+            $types = complaintlist::where('name', 'Like', '%' . $search . '%')
+                ->orWhere('number', 'like', '%' . $search . '%')->get();
+                // dd('in if');
+            return view('admin.layouts.complaint-list', compact('types'));
+        }
+        else{
+
+            return view('admin.layouts.complaint-list' ,compact('types'));
+
+        }
+       
     }
     public function complaintCreate()
     {

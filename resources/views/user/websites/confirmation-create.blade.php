@@ -4,13 +4,18 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div id="fullscreen_bg" class="fullscreen_bg"/>
+<!DOCTYPE html>
+<html>
+<body>
+
 
 <div class="container">
 
-<img src="R.jpg" alt="street" width="250" height="200">
-<img src="B.jpg" alt="Gas" width="250" height="200">
-<img src="C.jpg" alt="Water" width="250" height="200">
-<img src="E.jpg" alt="Electricity" width="250" height="200">
+<img src="{{url('/x.jpg')}}" alt="street" width="250" height="200"> 
+<img src="{{url('/B.jpg')}}" alt="Gas" width="250" height="200">
+<img src="{{url('/C.jpg')}}" alt="Water" width="250" height="200">
+<img src="{{url('/E.jpg')}}" alt="Electricity" width="250" height="200">
+
 
 
 	<form class="form-signin">
@@ -24,6 +29,9 @@
 	</form>
 
 </div>
+</body>
+</html>
+
 
 <style>
       body {

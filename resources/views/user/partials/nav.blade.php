@@ -22,6 +22,12 @@
     
    
 </ul>
+<li id="menu-item-5677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Feedback</a>
+<ul class="sub-menu">
+    <li id="menu-item-5786" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{route('user.feedbacks')}}">View</a></li>
+    
+   
+</ul>
 
 </li>
 </ul>

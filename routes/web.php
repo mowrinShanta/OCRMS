@@ -4,11 +4,12 @@ use App\Http\Controllers\Backend\OfficeController;
 use App\Http\Controllers\Backend\ContentController;
 use App\Http\Controllers\Backend\ComplaintController;
 use App\Http\Controllers\Backend\ComplainerController;
-use App\Http\Controllers\Backend\NidController;
+use App\Http\Controllers\Backend\FeedbackController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\UserloginController;
 use App\Http\Controllers\Frontend\contactController;
+use App\Http\Controllers\Frontend\FeedbacktableController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,8 @@ Route::get('/', function () {
 // Route::get('/applys',[UserController::class,'applyList'])->name('user.applys');
 //contact table show korar jonno
 Route::get('/contacts',[ContactController::class,'contactList'])->name('user.contacts');
+//feedback
+Route::get('/feedbacks',[FeedbacktableController::class,'feedbackTable'])->name('user.feedbacks');
 
 
 Route::get('/registration',[UserController::class,'registrationForm'])->name('user.registration'); 
@@ -50,6 +53,7 @@ Route::get('/confirmation',[UserController::class,'confirmationCreate'])->name('
 
 
 Route::get('/table',[UserController::class,'complainerTable'])->name('admin.complainer.table');
+
 
 
 });
@@ -112,13 +116,13 @@ Route::group(['prefix'=>'admin-portal'],function(){
 
 
 //Nid information
-    Route::get('/nids',[NidController::class,'nidList'])->name('admin.nids');  //form show koranor jonno
-    Route::get('/nids/create',[NidController::class,'nidCreate'])->name('admin.nids.create');   //form create korar jonno
-    Route::post('/nids/store',[NidController::class,'store'])->name('admin.nids.store');   //database data submit korar jonno
-    Route::get('/nids/edit/{id}',[NidController::class,'nidEdit'])->name('admin.nids.edit');
-    Route::put('/nids/update/{id}',[NidController::class,'nidUpdate'])->name('admin.nids.update');
-    Route::get('nids/view/{nids_id}',[NidController::class,'nidDetails'])->name('admin.nids.details');
-    Route::get('nids/delete/{nids_id}',[NidController::class,'nidDelete'])->name('admin.nids.delete');
+    Route::get('/feedbacks',[FeedbackController::class,'feedbackList'])->name('admin.feedbacks');  //form show koranor jonno
+    Route::get('/feedbacks/create',[FeedbackController::class,'feedbackCreate'])->name('admin.feedbacks.create');   //form create korar jonno
+    Route::post('/feedbacks/store',[FeedbackController::class,'store'])->name('admin.feedbacks.store');   //database data submit korar jonno
+    Route::get('/feedbacks/edit/{id}',[FeedbackController::class,'feedbackEdit'])->name('admin.feedbacks.edit');
+    Route::put('/feedbacks/update/{id}',[FeedbackController::class,'feedbackUpdate'])->name('admin.feedbacks.update');
+    Route::get('feedbacks/view/{feedbacks_id}',[FeedbackController::class,'feedbackDetails'])->name('admin.feedbacks.details');
+    Route::get('feedbacks/delete/{feedbacks_id}',[FeedbackController::class,'feedbackDelete'])->name('admin.feedbacks.delete');
 
 
     Route::get('/content',[ContentController::class,'contentList'])->name('admin.content');
