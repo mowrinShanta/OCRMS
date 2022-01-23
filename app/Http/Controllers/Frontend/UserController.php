@@ -127,7 +127,7 @@ class UserController extends Controller
         'cell'=>$request->cell,
            
       ]);
-      return redirect()->back();
+      return redirect()->route('user');
     }
 
 

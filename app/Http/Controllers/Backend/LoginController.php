@@ -14,6 +14,13 @@ class LoginController extends Controller
         //$lists=counciloroffice::all(); //table r sob dekhanor jonno
         return view('admin.layouts.login');
     }
+    //profile
+    public function profileList()
+    {
+        //$lists=counciloroffice::all(); //table r sob dekhanor jonno
+        return view('admin.layouts.profile');
+    }
+
 
     public function dologIn(Request $request )
     
@@ -40,8 +47,6 @@ class LoginController extends Controller
         Auth::logout();
         return redirect()->route('admin.login')->with('message','Logging out.');
     }
-    }
-
-
-
+   
+}
 

@@ -36,37 +36,7 @@ class ComplainerController extends Controller
 //      $product=Product::where('id',$product_id)->first();
         return view('admin.layouts.complainer-details',compact('list'));
     }
-    public function complainerEdit($id){
-        // dd($id);
-        $list = complaintdetail::all();
-        $list = complaintdetail::find($id);
-        if ($list) {
-            return view('admin.layouts.update-complainer',compact('list'));
-        }
-
-    }
-    public function complainerUpdate(Request $request,$id){
-        //dd($request->all());
-        //dd($id);
-       $list = complaintdetail::find($id);
-       // dd($counciloroffice);
-       if ($list) {
-           $list->update([
-               'date'=>$request->date,
-            'time'=>$request->time,
-            'name'=>$request->name,
-            'address'=>$request->address,
-            'complainttype'=>$request->complainttype,
-            'description'=>$request->description,
-            'image'=>$request->image,
-            'oname'=>$request->oname,
-            'orname'=>$request->orname,
-            'email'=>$request->email,
-            'cell'=>$request->cell,
-            ]);
-            return redirect()->route('admin.complainers');
-        }
-    }
+    
 
     public function complainerDelete($list_id)
     {

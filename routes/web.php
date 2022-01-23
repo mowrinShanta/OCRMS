@@ -87,6 +87,12 @@ Route::group(['prefix'=>'admin-portal'],function(){
 
 
     //end login
+    Route::get('/profiles',[LoginController::class,'profileList'])->name('admin.profiles');
+
+
+
+
+
     Route::get('/offices',[OfficeController::class,'officeList'])->name('admin.offices');
     Route::get('/offices/create',[OfficeController::class,'officeCreate'])->name('admin.offices.create');
     Route::post('/offices/store',[OfficeController::class,'store'])->name('admin.offices.store');
@@ -109,8 +115,6 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/complainers/create',[ComplainerController::class,'complainerCreate'])->name('admin.complainer.create');
     Route::post('/complainers/store',[ComplainerController::class,'store'])->name('admin.complainer.store');
     Route::get('complainers/view/{complainer_id}',[ComplainerController::class,'complainertDetails'])->name('admin.complainer.details');
-    Route::get('/complainers/edit/{id}',[ComplainerController::class,'complainerEdit'])->name('admin.complainer.edit');
-    Route::put('/complainers/update/{id}',[ComplainerController::class,'complainerUpdate'])->name('admin.complainer.update');
     Route::get('complainers/delete/{complainer_id}',[ComplainerController::class,'complainerDelete'])->name('admin.complainer.delete');
 
 

@@ -1059,8 +1059,8 @@
                                     <div class="col-sm-5">
                                         <h3>Which is required to apply Complaint</h3>
                                         <div class="col-lg-12">
-                                            <p><i class="fa fa-snowflake-o"></i> Your national identity card number</p>
-                                            <p><i class="fa fa-snowflake-o"></i> Your mobile number</p>
+                                            <p><i class="fa fa-snowflake-o"></i> Your have to Registration first</p>
+                                            <p><i class="fa fa-snowflake-o"></i> Your have to Login</p>
 
                                         </div>
                                         <br />
@@ -1081,8 +1081,7 @@
                                                             style="color:#FFF!important;"></i> First Step </p>
                                                 </div>
                                                 <div class="col-lg-12">
-                                                    <p><i class="fa fa-snowflake-o"></i>Submit your national identity
-                                                        card number and mobile number </p>
+                                                    <p><i class="fa fa-snowflake-o"></i>Submit your Name,Password,Email,Phone Number for registration </p>
 
                                                 </div>
                                                 <br />
