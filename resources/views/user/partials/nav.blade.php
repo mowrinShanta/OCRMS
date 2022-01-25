@@ -30,8 +30,8 @@
 </ul>
 <li id="menu-item-5677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Councilor Office Services</a>
 <ul class="sub-menu">
-   <li id="menu-item-5786" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{route('user.feedbacks')}}">View</a></li>
-   <li id="menu-item-5786" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{route('user.feedbacks')}}">View</a></li>
+   <li id="menu-item-5786" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{route('user.healthcare')}}">Health care</a></li>
+   <li id="menu-item-5786" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{route('user.agriculture')}}">Health care</a></li>
    <li id="menu-item-5786" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{route('user.feedbacks')}}">View</a></li>
      
    

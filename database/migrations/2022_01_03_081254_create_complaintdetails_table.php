@@ -26,7 +26,7 @@ class CreateComplaintdetailsTable extends Migration
             $table->string('orname');
             $table->string('email');
             $table->string('cell');
-            // $table->string('case_status')->default('pending');
+            $table->string('case_status')->default('pending');
             $table->timestamps();
         });
     }

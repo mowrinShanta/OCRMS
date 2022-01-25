@@ -15,4 +15,11 @@ class ContentController extends Controller
          $infos=complaintdetail::all();
         return view('admin.layouts.dashboard-content',compact('infos'));
     }
+
+    public function monitoring()
+    {
+        $infos=complaintdetail::all();
+        return view('admin.layouts.dashboard-content',compact('infos'));
+    }
+
 }

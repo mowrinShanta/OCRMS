@@ -15,6 +15,11 @@ class FeedbacktableController extends Controller
         return view('user.websites.feedback-table', compact('types'));
     }
 
+    public function healthCare()
+    {
+        // $types=feedbacklist::all(); //table r sob dekhanor jonno
+        return view('user.websites.health-care');
+    }
 
 
 }

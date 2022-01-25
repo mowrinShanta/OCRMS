@@ -95,25 +95,30 @@ class UserController extends Controller
 
 
 
-
-// public function status_solved($id){
-//         $content = complaintdetail::find($id);
-//         if($content->case_status)
-//         {
-//             $content->update([
-//                 'case_status' => 'solved'
-//             ]);
-//         }
+//status portion
+public function case_status($id){
+//dd($id);
+        $info = complaintdetail::find($id);
+        if($info->case_status)
+        {
+            $info->update([
+                'case_status'=>'solved'
+            ]);
+        }
+        
     
-//         return redirect()->back()->with('success','Case Solved');
-//     }
+        return redirect()->back();
+    }
+
+//end status portion
+
+    public function InfoDelete($id)
+    {
+        complaintdetail::find($id)->delete();
+       return redirect()->back()->with('success','Policestation is Deleted.');
+    }
 
 
-//     public function InfoDelete($id)
-//     {
-//         complaintdetail::find($id)->delete();
-//        return redirect()->back()->with('success','Policestation is Deleted.');
-//     }
     //registration form
     public function storage(Request $request){
         //  dd($request->all());
