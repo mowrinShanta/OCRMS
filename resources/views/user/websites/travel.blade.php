@@ -16,8 +16,8 @@
 <div class="row">
 
 	<div class="col-md-6">
-		<h1 class=".text-warning">Law and order</h1>
-        <div><img src="{{url('/law.jpg')}}" alt="street" width="600" height="400"> </div>
+		<h1 class=".text-warning">Travel</h1>
+        <div><img src="{{url('/travel.jpg')}}" alt="street" width="600" height="400"> </div>
 		
         
 
@@ -25,17 +25,32 @@
     
 <div class="col-md-6">
 
-    <h3>Emergency communication with the police</h3>
+    <h3>Hajj service</h3>
 
-    <a href="https://dmp.gov.bd/" target="_blank">Dhaka Metropolitan Police(DMP)</a>
-    <br>
-    <a href="https://www.rab.gov.bd/" target="_blank">Rapid Action Battalion(RAB)</a>
-    <br>
-    <a href="https://www.police.gov.bd/" target="_blank">Bangladesh Police</a>
+        <b><p>An information-based website on Hajj has been launched at the initiative of the Ministry of Religious Affairs. This website provides necessary information for Hajj pilgrims and their relatives, friends, agents and concerned government officials. Moreover, the condition of the pilgrims during Hajj is known through this website. According to official figures, 99,72 people performed Hajj in 2014.</p></b>
 
-       
-<b><h3>Bangladesh Fire Service and Civil Defense Department</h3></b>
-<a href="http://www.fireservice.gov.bd/" target="_blank">Bangladesh Fire Service and Civil Defense Department</a>
+        <a href="http://www.hajj.gov.bd/-pilgrim-search-" target="_blank">Pilgrim Search</a>
+
+        
+<b><h3>Hajj tips</h3></b>
+
+<b><p>Click here to know about hajj tips.</p></b>
+<a href="http://www.hajj.gov.bd/hajj-tips/" target="_blank">Hajj tips</a>
+
+<b><h3>Baggage Rules</h3></b>
+<b><p>Click here to know about baggage rules.</p></b>
+
+<a href="http://www.hajj.gov.bd/baggage-rules/" target="_blank">Baggage Rules</a>
+
+<b><h3>Passport and Visa </h3></b>
+<b><p>Click here to get Passport information.</p></b>
+
+<a href="https://bangladesh.gov.bd/site/page/708b9214-cd84-401b-a337-d01e3f37f9d9/%E0%A6%AA%E0%A6%BE%E0%A6%B8%E0%A6%AA%E0%A7%8B%E0%A6%B0%E0%A7%8D%E0%A6%9F" target="_blank">Passport</a>
+<b><p>Click here to  get visa information.</p></b>
+
+<a href="https://bangladesh.gov.bd/site/page/90309e9a-e385-4e3e-b550-672635a7b05e/%E0%A6%AD%E0%A6%BF%E0%A6%B8%E0%A6%BE" target="_blank">Visa</a>
+
+
 </div>
 </div>
 </body>

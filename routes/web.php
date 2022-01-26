@@ -53,6 +53,7 @@ Route::get('/nidds/status/solved/{id}',[UserController::class,'case_status'])->n
 //services
 Route::get('/healthcare',[FeedbacktableController::class,'healthCare'])->name('user.healthcare');
 Route::get('/law',[FeedbacktableController::class,'Law'])->name('user.law');
+Route::get('/travel',[FeedbacktableController::class,'Travel'])->name('user.travel');
 
 
 Route::get('/registration',[UserController::class,'registrationForm'])->name('user.registration'); 

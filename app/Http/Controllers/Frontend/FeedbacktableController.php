@@ -26,6 +26,11 @@ class FeedbacktableController extends Controller
         // $types=feedbacklist::all(); //table r sob dekhanor jonno
         return view('user.websites.law');
     }
+    public function Travel()
+    {
+        // $types=feedbacklist::all(); //table r sob dekhanor jonno
+        return view('user.websites.travel');
+    }
 
 
 
