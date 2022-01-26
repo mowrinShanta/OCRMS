@@ -16,8 +16,8 @@
 <div class="row">
 
 	<div class="col-md-6">
-		<h1 class=".text-warning">Healthcare Information</h1>
-        <div><img src="{{url('/health.jpg')}}" alt="street" width="600" height="400"> </div>
+		<h1 class=".text-warning">Law and order</h1>
+        <div><img src="{{url('/law.jpg')}}" alt="street" width="600" height="400"> </div>
 		
         
 
@@ -26,6 +26,8 @@
 <div class="col-md-6">
 
     <h3>Health system of Bangladesh</h3>
+
+    <a href="https://dmp.gov.bd/">DMP</a>
 
         <b><p>In Bangladesh, the commercial sector, as well as NGOs and international organizations, are all active in the field of healthcare. The Ministry of Health and Family Welfare is the top body in the public sector for policy formation, planning, and decision-making at both the individual and collective levels. The Ministry's four departments provide health services to citizens: the Department of Health, the Department of Family Planning, the Directorate of Nursing Services, and the Department of Drug Administration.</p></b>
 
