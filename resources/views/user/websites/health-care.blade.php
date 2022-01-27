@@ -28,11 +28,24 @@
     <h3>Health system of Bangladesh</h3>
 
         <b><p>In Bangladesh, the commercial sector, as well as NGOs and international organizations, are all active in the field of healthcare. The Ministry of Health and Family Welfare is the top body in the public sector for policy formation, planning, and decision-making at both the individual and collective levels. The Ministry's four departments provide health services to citizens: the Department of Health, the Department of Family Planning, the Directorate of Nursing Services, and the Department of Drug Administration.</p></b>
+        <b><p>Click here to know about Health system of Bangladesh.</p></b>
+
+<a href="https://bangladesh.gov.bd/site/page/24d83b78-a2e6-4de6-aa8a-2db4728daa54/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A7%87%E0%A6%B0-%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A7%8D%E0%A6%AF-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%BE" target="_blank">Health system of Bangladesh</a>
 
 <b><h3>Bangladesh Medical & Dental Council (BM&DC)</h3></b>
 <b><p>The Bangladesh Medical & Dental Council (BM&&DC) is a statutory body with the responsibility of establishing and maintaining high standards of medical education and recognition of medical qualifications in Bangladesh. It registers doctors to practice in Bangladesh, in order to protect and promote the health and safety of the public by ensuring proper standards in the practice of medicine.</p></b>
+<b><p>Click here to know about (BM&DC).</p></b>
+
+<a href="https://www.bmdc.org.bd/" target="_blank">(BM&DC)</a>
+
+
 <b><h3>International Health Organization</h3></b>
 <b><p>People can take information about World Health Organization, Bangladesh UNICEF, Bangladesh UNFPA, Bangladesh</p></b>
+<b><p>Click here to know about International Health Organization.</p></b>
+
+<a href="https://bangladesh.gov.bd/site/page/d4d5b565-a566-4383-91cb-1bb9a22cc2cb/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%A4%E0%A6%BF%E0%A6%95-%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A7%8D%E0%A6%AF-%E0%A6%B8%E0%A6%82%E0%A6%B8%E0%A7%8D%E0%A6%A5%E0%A6%BE" target="_blank">International Health Organization</a>
+
+
 </div>
 </div>
 </body>

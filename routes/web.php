@@ -46,6 +46,9 @@ Route::get('/', function () {
 Route::get('/contacts',[ContactController::class,'contactList'])->name('user.contacts');
 //feedback
 Route::get('/feedbacks',[FeedbacktableController::class,'feedbackTable'])->name('user.feedbacks');
+//notice
+Route::get('/notice',[FeedbacktableController::class,'Notice'])->name('user.notice');
+
 
 Route::get('/nidds/status/solved/{id}',[UserController::class,'case_status'])->name('user.status.solved');   //database data submit korar jonno
 
@@ -54,7 +57,8 @@ Route::get('/nidds/status/solved/{id}',[UserController::class,'case_status'])->n
 Route::get('/healthcare',[FeedbacktableController::class,'healthCare'])->name('user.healthcare');
 Route::get('/law',[FeedbacktableController::class,'Law'])->name('user.law');
 Route::get('/travel',[FeedbacktableController::class,'Travel'])->name('user.travel');
-
+Route::get('/recruitment',[FeedbacktableController::class,'Recruitment'])->name('user.recruitment');
+Route::get('/education',[FeedbacktableController::class,'Education'])->name('user.education');
 
 Route::get('/registration',[UserController::class,'registrationForm'])->name('user.registration'); 
 Route::post('/registration/storage',[UserController::class,'storage'])->name('user.registration.storage');
