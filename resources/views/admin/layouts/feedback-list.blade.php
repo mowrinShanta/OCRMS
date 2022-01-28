@@ -34,7 +34,7 @@
     <td>
     <a class="btn btn-primary" href="{{route('admin.feedbacks.details',$feedbacktype->id)}}">View</a>
     <a class="btn btn-success" href="{{route('admin.feedbacks.edit',$feedbacktype->id)}}">Edit</a> 
-    <a class="btn btn-danger"  href="{{route('admin.feedbacks.delete',$feedbacktype->id)}}">Delete</a>
+    <a onclick="return confirm('Are you sure?')" class="btn btn-danger"  href="{{route('admin.feedbacks.delete',$feedbacktype->id)}}">Delete</a>
 </td>
     
     </tr>

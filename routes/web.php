@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\OfficeController;
 use App\Http\Controllers\Backend\ContentController;
+use App\Http\Controllers\Backend\NoticeController;
 use App\Http\Controllers\Backend\ComplaintController;
 use App\Http\Controllers\Backend\ComplainerController;
 use App\Http\Controllers\Backend\FeedbackController;
@@ -153,11 +154,15 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/content',[ContentController::class,'contentList'])->name('admin.content');
     
     
-    
+    Route::get('/notices',[NoticeController::class,'noticesList'])->name('admin.notices');
+    Route::get('/notices/create',[NoticeController::class,'noticesCreate'])->name('admin.notices.create');
+    Route::post('/notices/store',[NoticeController::class,'store'])->name('admin.notices.store');
+    Route::get('notices/view/{notices_id}',[NoticeController::class,'noticesDetails'])->name('admin.notices.details');
+    Route::get('/notices/edit/{id}',[NoticeController::class,'noticesEdit'])->name('admin.notices.edit');
+    Route::put('/notices/update/{id}',[NoticeController::class,'noticesUpdate'])->name('admin.notices.update');
+    Route::get('notices/delete/{notices_id}',[NoticeController::class,'noticesDelete'])->name('admin.notices.delete');
 });
 
 
 });
-//user route
-
     

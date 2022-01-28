@@ -60,7 +60,7 @@
 
     <td>
     <a href="{{route('admin.complainer.details',$list->id)}}" class="btn btn-primary">View</a>
-    <a href="{{route('admin.complainer.delete',$list->id)}}" class="btn btn-danger">Delete</a>
+    <a onclick="return confirm('Are you sure?')" href="{{route('admin.complainer.delete',$list->id)}}" class="btn btn-danger">Delete</a>
     </td>
     
     </tr>

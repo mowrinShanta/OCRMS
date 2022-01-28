@@ -48,7 +48,7 @@
     <td>
                         <a class="btn btn-primary" href="{{route('admin.office.details',$counciloroffice->id)}}">View</a>
                         <a class="btn btn-success" href="{{route('admin.offices.edit',$counciloroffice->id)}}">Edit</a>
-                        <a class="btn btn-danger" href="{{route('admin.office.delete',$counciloroffice->id)}}">Delete</a>
+                        <a onclick="return confirm('Are you sure?')" class="btn btn-danger" href="{{route('admin.office.delete',$counciloroffice->id)}}">Delete</a>
                     </td>
     </tr>
     @endforeach

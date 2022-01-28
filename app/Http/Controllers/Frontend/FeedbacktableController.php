@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\feedbacklist;
+use App\Models\notice;
 use Illuminate\Http\Request;
 
 class FeedbacktableController extends Controller
@@ -48,8 +49,8 @@ class FeedbacktableController extends Controller
     //notice
     public function Notice()
     {
-        // $types=feedbacklist::all(); //table r sob dekhanor jonno
-        return view('user.websites.notice');
+        $notices=notice::all(); //table r sob dekhanor jonno
+        return view('user.websites.notice', compact('notices'));
     }
 
 

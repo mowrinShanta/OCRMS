@@ -49,7 +49,7 @@
     <td>
     <a href="{{route('admin.complaint.details',$complainttype->id)}}" class="btn btn-primary">View</a>
     <a href="{{route('admin.complaint.edit',$complainttype->id)}}" class="btn btn-success">Edit</a> 
-    <a href="{{route('admin.complaint.delete',$complainttype->id)}}" class="btn btn-danger">Delete</a>
+    <a onclick="return confirm('Are you sure?')" href="{{route('admin.complaint.delete',$complainttype->id)}}" class="btn btn-danger">Delete</a>
     </td>
     
     </tr>
