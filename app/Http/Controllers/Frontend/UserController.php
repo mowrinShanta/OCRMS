@@ -62,6 +62,22 @@ class UserController extends Controller
         
                          }
 
+                         $request->validate([
+
+
+                            'date'=>'required',
+                            'time'=>'required',
+                            'name'=>'required',
+                            'address'=>'required',
+                            'complainttype'=>'required',
+                            'description'=>'required',
+                            'image'=>'required',
+                            'oname'=>'required',
+                            'orname'=>'required',
+                            'email'=>'required|email',
+                            'cell'=>'required|numeric|digits:11',
+                        ]);
+
 
         complaintdetail::create([
             //field name from DB ||  field name from form

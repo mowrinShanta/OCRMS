@@ -21,6 +21,15 @@ class NoticeController extends Controller
     }
     public function store(Request $request){
         //dd($request->all());
+
+        $request->validate([
+
+
+            'date'=>'required',
+            'description'=>'required',
+            'work'=>'required',
+
+        ]);
      
         notice::create([
             //field name from DB ||  field name from form
@@ -44,8 +53,9 @@ class NoticeController extends Controller
 
     public function noticesEdit($id){
         // dd($id);
-        $notice = notice::all();
+        // $notices = notice::all();
         $notice = notice::find($id);
+        // dd($notice);
         if ($notice) {
             return view('admin.layouts.update-notice',compact('notice'));
         }

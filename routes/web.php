@@ -160,7 +160,7 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('notices/view/{notices_id}',[NoticeController::class,'noticesDetails'])->name('admin.notices.details');
     Route::get('/notices/edit/{id}',[NoticeController::class,'noticesEdit'])->name('admin.notices.edit');
     Route::put('/notices/update/{id}',[NoticeController::class,'noticesUpdate'])->name('admin.notices.update');
-    Route::get('notices/delete/{notices_id}',[NoticeController::class,'noticesDelete'])->name('admin.notices.delete');
+    Route::get('/notices/delete/{notices_id}',[NoticeController::class,'noticesDelete'])->name('admin.notices.delete');
 });
 
 

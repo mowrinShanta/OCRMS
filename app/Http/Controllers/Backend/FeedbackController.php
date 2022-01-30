@@ -22,6 +22,18 @@ class FeedbackController extends Controller
 
    public function store(Request $request){
         //dd($request->all());
+
+        $request->validate([
+
+
+            'feedbacknumber'=>'required|numeric|digits:3',
+            'officename'=>'required',
+            'officername'=>'required',
+            'complainername'=>'required',
+            'complaineremail'=>'required|email',
+            'complaintdetails'=>'required',
+            'improvement'=>'required',
+        ]);
      
         feedbacklist::create([
             //field name from DB ||  field name from form

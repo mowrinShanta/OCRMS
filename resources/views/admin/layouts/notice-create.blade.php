@@ -3,6 +3,19 @@
 
 @section('content')
 
+<!-- validation sms -->
+@if($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+</ul>
+</div>
+@endif
+<!-- end validation sms -->
+
+
     <h1>Notice list</h1>
 
     <form action="{{route('admin.notices.store')}}" enctype= "multipart/form-data"  method="POST">

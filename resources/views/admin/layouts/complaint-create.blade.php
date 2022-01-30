@@ -3,6 +3,18 @@
 
 @section('content')
 
+<!-- validation sms -->
+@if($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+</ul>
+</div>
+@endif
+<!-- end validation sms -->
+
     <h1>Complaint type list</h1>
 
     <form action="{{route('admin.complaint_type.store')}}" enctype= "multipart/form-data"  method="POST">

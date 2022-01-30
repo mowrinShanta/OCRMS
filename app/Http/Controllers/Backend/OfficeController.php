@@ -37,13 +37,14 @@ class OfficeController extends Controller
 
     public function store(Request $request){
         // dd($request->all());
-        $validated = $request->validate
-        ([
+        $request->validate([
+
+
             'name'=>'required',
             'address'=>'required',
-            'telephone'=>'required',
-            'cell'=>'required',
-            'email'=>'required',
+            'telephone'=>'required|numeric|digits:8',
+            'cell'=>'required|numeric|digits:11',
+            'email'=>'required|email',
         ]);
 
           counciloroffice::create([

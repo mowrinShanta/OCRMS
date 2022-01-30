@@ -51,7 +51,7 @@ class ComplaintController extends Controller
 
 $request->validate
 ([
-    'complaintnumber'=>'required',
+    'complaintnumber'=>'required|numeric|digits:3',
     'complainttype'=>'required',
     'complaintdetails'=>'required',
     'image'=>'required',
