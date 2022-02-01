@@ -27,20 +27,7 @@
 
 						@csrf
 
-						<!--confirmation with sms -->
 
-@if(session('message'))
-<div class="alert alert-danger">
-	{!!session('message')!!}
-</div>
-@endif
-
-
-@if(session('sms'))
-<div class="alert alert-danger">
-	{!!session('sms')!!}
-</div>
-@endif
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>

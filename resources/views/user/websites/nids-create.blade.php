@@ -3,15 +3,19 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <!-- validation sms -->
-@if($errors->any())
+@if(session('message'))
 <div class="alert alert-danger">
-    <ul>
-        @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-</ul>
+	{!!session('message')!!}
 </div>
 @endif
+
+
+@if(session('sms'))
+<div class="alert alert-danger">
+	{!!session('sms')!!}
+</div>
+@endif
+
 <!-- end validation sms -->
 <body>
 

@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -77,3 +78,18 @@
 <script src="https://getbootstrap.com/docs/5.1/examples/dashboard/dashboard.js"></script>
 </body>
 </html>
+
+<!--confirmation with sms -->
+
+@if(session('message'))
+<div class="alert alert-danger">
+	{!!session('message')!!}
+</div>
+@endif
+
+
+@if(session('sms'))
+<div class="alert alert-danger">
+	{!!session('sms')!!}
+</div>
+@endif

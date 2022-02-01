@@ -37,7 +37,7 @@ class UserloginController extends Controller
     public function logOut()
     {
         Auth::logout();
-        return redirect()->route('user')->with('message','Logging out.');
+        return redirect()->route('root')->with('message','Logging out.');
     }
 }
 

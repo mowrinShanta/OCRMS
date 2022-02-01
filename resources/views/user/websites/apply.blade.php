@@ -8,13 +8,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <script src="https://code.jquery.com/jquery-2.1.0.min.js" ></script>
-<body>
 
-<div id="formWrapper">
-
-<div id="form">
-
-<!--confirmation with sms -->
 
 
 @if(session('message'))
@@ -29,6 +23,18 @@
 	{!!session('sms')!!}
 </div>
 @endif
+
+
+<body>
+
+<div id="formWrapper">
+
+<div id="form">
+
+
+
+
+
 
 <div class="logo">
 <h1 class="text-center head">Login</h1>
