@@ -50,9 +50,9 @@
     <td>{{$list->complainttype}} </td>
     <td>{{$list->description}} </td>
     
-    <td>
+    <th>
         <img src="{{url('/uploads/'.$list->image)}}" width="100px" alt="image">
-    </td>
+    </th>
     <td>{{$list->oname}} </td>
     <td>{{$list->orname}} </td>
     <!-- <td>{{$list->email}} </td>

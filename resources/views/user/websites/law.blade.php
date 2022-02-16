@@ -38,6 +38,7 @@
 <a href="http://www.fireservice.gov.bd/" target="_blank">Bangladesh Fire Service and Civil Defense Department</a>
 </div>
 </div>
+<button><a href="{{route('user')}}" class="btn btn-success">BACK</a></button> 
 </body>
 </html>
 

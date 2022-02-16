@@ -36,6 +36,8 @@
 <b><p>Click here to get more Educational information.</p></b>
 <a href="https://bangladesh.gov.bd/site/page/4beae68f-b94a-44dd-b827-becb5b7855e8/%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE-%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A7%9F%E0%A6%95-%E0%A6%A4%E0%A6%A5%E0%A7%8D%E0%A6%AF" target="_blank">Educational information</a>
 
+ 
+
 <b><h3>Ministry of Education</h3></b>
 <b><p>Click here to know about Ministry of Education.</p></b>
 
@@ -45,6 +47,7 @@
 
 </div>
 </div>
+<button><a href="{{route('user')}}" class="btn btn-success">BACK</a></button> 
 </body>
 </html>
 

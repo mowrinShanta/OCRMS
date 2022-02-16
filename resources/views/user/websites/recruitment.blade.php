@@ -45,10 +45,11 @@
 
 <a href="http://www.bpsc.gov.bd/" target="_blank">Bangladesh Public Service Commission</a>
 
-
+ 
 
 </div>
 </div>
+<button><a href="{{route('user')}}" class="btn btn-success">BACK</a></button> 
 </body>
 </html>
 

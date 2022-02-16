@@ -47,6 +47,21 @@
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/5.1/examples/dashboard/dashboard.css" rel="stylesheet">
 </head>
+
+<!--confirmation with sms -->
+
+@if(session('message'))
+<div class="alert alert-danger">
+	{!!session('message')!!}
+</div>
+@endif
+
+
+@if(session('sms'))
+<div class="alert alert-danger">
+	{!!session('sms')!!}
+</div>
+@endif
 <body>
 
 
@@ -78,18 +93,3 @@
 <script src="https://getbootstrap.com/docs/5.1/examples/dashboard/dashboard.js"></script>
 </body>
 </html>
-
-<!--confirmation with sms -->
-
-@if(session('message'))
-<div class="alert alert-danger">
-	{!!session('message')!!}
-</div>
-@endif
-
-
-@if(session('sms'))
-<div class="alert alert-danger">
-	{!!session('sms')!!}
-</div>
-@endif

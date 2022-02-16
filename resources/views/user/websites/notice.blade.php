@@ -15,7 +15,8 @@
 <div class="container">
   <h2>Notice</h2> 
   <br/>
-<br/>           
+<br/>  
+<button><a href="{{route('user')}}" class="btn btn-success">BACK</a></button>         
   <table class="table table-dark table-striped">
     <thead>
     <tr>

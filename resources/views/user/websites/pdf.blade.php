@@ -133,7 +133,9 @@
     <td>{{$information->email}} </td>
     <td>{{$information->complainttype}} </td>
     <td>{{$information->description}} </td>
-    <td>{{$information->image}} </td>
+    <td>
+        <img src="{{url('/uploads/'.$information->image)}}" width="100px" alt="image">
+    </td>
     
     </tr>
 

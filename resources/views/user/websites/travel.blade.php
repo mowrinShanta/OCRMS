@@ -31,7 +31,7 @@
 
         <a href="http://www.hajj.gov.bd/-pilgrim-search-" target="_blank">Pilgrim Search</a>
 
-        
+            
 <b><h3>Hajj tips</h3></b>
 
 <b><p>Click here to know about hajj tips.</p></b>
@@ -53,6 +53,7 @@
 
 </div>
 </div>
+<button><a href="{{route('user')}}" class="btn btn-success">BACK</a></button>  
 </body>
 </html>
 

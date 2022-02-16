@@ -11,18 +11,6 @@
 
 
 
-@if(session('message'))
-<div class="alert alert-danger">
-	{!!session('message')!!}
-</div>
-@endif
-
-
-@if(session('sms'))
-<div class="alert alert-danger">
-	{!!session('sms')!!}
-</div>
-@endif
 
 
 <body>

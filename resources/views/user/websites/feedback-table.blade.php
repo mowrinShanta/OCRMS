@@ -47,7 +47,7 @@
     </tbody>
   </table>
 </div>
-
+<button><a href="{{route('user')}}" class="btn btn-success">BACK</a></button> 
 </body>
 </html>
 

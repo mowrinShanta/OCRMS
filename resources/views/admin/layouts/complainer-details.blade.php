@@ -11,7 +11,10 @@
 <p>Complainer Address: {{$list->address}}</p>
 <p>Complaint Type: {{$list->complainttype}}</p>
 <p>Complaint Details: {{$list->description}}</p>
-<p>Problem Place Photo: {{$list->image}}</p>
+<p>
+    Problem Place Photo
+    <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/'.$list->image)}}" alt="image">
+</p>
 <p>Office Name: {{$list->oname}}</p>
 <p>Officer Name: {{$list->orname}}</p>
 <p>Officer Email: {{$list->email}}</p>
